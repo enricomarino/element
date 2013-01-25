@@ -1,4 +1,3 @@
-
 /**
  * element
  * Element component
@@ -19,4 +18,19 @@ module.expose = Element;
 
 function Element(el) {
   this.el = el;
+}
+
+/**
+ * Initialize a new `List` with 
+ * the given array-ish of `els` 
+ * and `selector` string.
+ *
+ * @param {Mixed} els
+ * @param {String} selector
+ * @api private
+ */
+
+function List(els, selector) {
+  this.els = els || [];
+  this.selector = selector;
 }
