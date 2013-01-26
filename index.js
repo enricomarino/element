@@ -54,6 +54,29 @@ Element.prototype.clone = function() {
 };
 
 /**
+ * prepend
+ * Prepend `element`.
+ *
+ * @param {Element} el
+ * @return {Element} this for chaining
+ * @api public
+ */
+
+Element.prototype.prepend = function(element){
+  var el = this.el;
+  if (!el) {
+    return this;
+  }
+  if (el.children.length) {
+    el.insertBefore(element, el.firstChild);
+  } else {
+    el.appendChild(element);
+  }
+  return this;
+};
+
+
+/**
  * Initialize a new `List` with 
  * the given array-ish of `els` 
  * and `selector` string.
