@@ -22,6 +22,7 @@ function Element(el) {
 
 
 /**
+ * attr
  * Get attribute `name` 
  * or set attribute `name` to `val`.
  *
@@ -37,6 +38,19 @@ Element.prototype.attr = function(name, val) {
   } 
   this.el.setAttribute(name, val);
   return this;
+};
+
+/**
+ * clone
+ * Return a cloned `Element`.
+ *
+ * @return {Element}
+ * @api public
+ */
+
+Element.prototype.clone = function() {
+  var el = this.el.cloneNode(true);
+  return new Element(el);
 };
 
 /**
