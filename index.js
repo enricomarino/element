@@ -17,6 +17,7 @@ module.expose = Element;
  */
 
 function Element(el) {
+  el = el || document.createElement('div');
   this.el = el;
 }
 
@@ -64,9 +65,6 @@ Element.prototype.clone = function() {
 
 Element.prototype.prepend = function(element){
   var el = this.el;
-  if (!el) {
-    return this;
-  }
   if (el.children.length) {
     el.insertBefore(element, el.firstChild);
   } else {
@@ -75,6 +73,20 @@ Element.prototype.prepend = function(element){
   return this;
 };
 
+/**
+ * prepend
+ * Prepend `element`.
+ *
+ * @param {Element} element
+ * @return {Element} this for chaining
+ * @api public
+ */
+
+Element.prototype.append = function(element){
+  var el = this.el;
+  el.appendChild(element);
+  return this;
+};
 
 /**
  * Initialize a new `List` with 
