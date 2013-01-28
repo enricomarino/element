@@ -89,6 +89,19 @@ Element.prototype.append = function(element){
 };
 
 /**
+ * appendTo
+ * Append self's `el` to `element`
+ *
+ * @param {Element} element
+ * @return {Element} this for chaining 
+ * @api public
+ */
+
+Element.prototype.appendTo = function(element){
+  element.append(this.el);
+};
+
+/**
  * Initialize a new `List` with 
  * the given array-ish of `els` 
  * and `selector` string.
