@@ -21,7 +21,6 @@ function Element(el) {
   this.el = el;
 }
 
-
 /**
  * attr
  * Get attribute `name` 
@@ -115,3 +114,22 @@ function List(els, selector) {
   this.els = els || [];
   this.selector = selector;
 }
+
+/**
+ * attr
+ * Get attribute `name` 
+ * or set attribute `name` to `val`.
+ *
+ * @param {String} name
+ * @param {String} [val]
+ * @return {List} this for chaining
+ * @api public
+ */
+
+List.prototype.attr = function(name, val) {
+  this.els.forEach(function(el) {
+    el.attr(name, val);
+  });
+  return this;
+};
+
