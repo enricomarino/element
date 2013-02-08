@@ -99,37 +99,3 @@ Element.prototype.append = function(element){
 Element.prototype.appendTo = function(element){
   element.append(this.el);
 };
-
-/**
- * Initialize a new `List` with 
- * the given array-ish of `els` 
- * and `selector` string.
- *
- * @param {Mixed} els
- * @param {String} selector
- * @api private
- */
-
-function List(els, selector) {
-  this.els = els || [];
-  this.selector = selector;
-}
-
-/**
- * attr
- * Get attribute `name` 
- * or set attribute `name` to `val`.
- *
- * @param {String} name
- * @param {String} [val]
- * @return {List} this for chaining
- * @api public
- */
-
-List.prototype.attr = function(name, val) {
-  this.els.forEach(function(el) {
-    el.attr(name, val);
-  });
-  return this;
-};
-
