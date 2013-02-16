@@ -111,6 +111,20 @@ Element.prototype.into = function (element) {
  */
 
 Element.prototype.before = function (element) {
-  this.el.parentNode.insertBefore(this.el, element.nextSibling);
+  element.parentNode.insertBefore(this.el, element.nextSibling);
+  return this;
+};
+
+/**
+ * after
+ * Insert this `el` after `element`
+ * 
+ * @param {Element} element element
+ * @return {Element} this for chaining
+ * @api public
+ */
+
+Element.prototype.after = function (element) {
+  element.parentNode.insertBefore(this.el, element);
   return this;
 };
