@@ -1,4 +1,3 @@
-
 /**
  * element
  * Element component
@@ -157,4 +156,16 @@ Element.prototype.next = function () {
 
 Element.prototype.previous = function () {
   return this.el.previousSibling;
+};
+
+/**
+ * parent
+ * Get the parent node
+ * 
+ * @return {Element} parent
+ * @api public
+ */
+
+Element.prototype.parent = function () {
+  return this.el.parentNode;
 };
