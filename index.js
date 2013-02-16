@@ -16,7 +16,7 @@ module.expose = Element;
  * Element
  */
 
-function Element(el) {
+function Element (el) {
   el = el || document.createElement('div');
   this.el = el;
 }
@@ -32,7 +32,7 @@ function Element(el) {
  * @api public
  */
 
-Element.prototype.attr = function(name, val) {
+Element.prototype.attr = function (name, val) {
   if (1 == arguments.length) {
     return this.el.getAttribute(name);
   } 
@@ -48,7 +48,7 @@ Element.prototype.attr = function(name, val) {
  * @api public
  */
 
-Element.prototype.clone = function() {
+Element.prototype.clone = function () {
   var el = this.el.cloneNode(true);
   return new Element(el);
 };
@@ -62,7 +62,7 @@ Element.prototype.clone = function() {
  * @api public
  */
 
-Element.prototype.prepend = function(element){
+Element.prototype.prepend = function (element) {
   var el = this.el;
   if (el.children.length) {
     el.insertBefore(element, el.firstChild);
@@ -81,21 +81,23 @@ Element.prototype.prepend = function(element){
  * @api public
  */
 
-Element.prototype.append = function(element){
+Element.prototype.append = function (element) {
   var el = this.el;
   el.appendChild(element);
   return this;
 };
 
 /**
- * appendTo
- * Append self's `el` to `element`
+ * into
+ * Append this `el` to `element`
  *
  * @param {Element} element
  * @return {Element} this for chaining 
  * @api public
  */
 
-Element.prototype.appendTo = function(element){
+Element.prototype.into = function (element) {
   element.append(this.el);
+  return this;
 };
+
