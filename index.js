@@ -133,3 +133,15 @@ Element.prototype.after = function (element) {
   }
   return this;
 };
+
+/**
+ * next
+ * Get the next sibling
+ * 
+ * @return {Element} next sibling
+ * @api public
+ */
+
+Element.prototype.next = function () {
+  return this.el.nextSibling;
+};
