@@ -111,7 +111,7 @@ Element.prototype.into = function (element) {
  */
 
 Element.prototype.before = function (element) {
-  element.parentNode.insertBefore(this.el, element.nextSibling);
+  element.parentNode.insertBefore(this.el, element);
   return this;
 };
 
@@ -125,6 +125,11 @@ Element.prototype.before = function (element) {
  */
 
 Element.prototype.after = function (element) {
-  element.parentNode.insertBefore(this.el, element);
+  var sibling = element.nextSibling;
+  if (sibling) {
+    element.parentNode.insertBefore(this.el, sibling);
+  } else {
+    element.parentNode.appendChild(this);
+  }
   return this;
 };
