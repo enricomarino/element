@@ -91,7 +91,7 @@ Element.prototype.append = function (element) {
  * into
  * Append this `el` to `element`
  *
- * @param {Element} element
+ * @param {Element} element element
  * @return {Element} this for chaining 
  * @api public
  */
@@ -101,3 +101,16 @@ Element.prototype.into = function (element) {
   return this;
 };
 
+/**
+ * before
+ * Insert this `el` before `element`
+ * 
+ * @param {Element} element element
+ * @return {Element} this for chaining
+ * @api public
+ */
+
+Element.prototype.before = function (element) {
+  this.el.parentNode.insertBefore(this.el, element.nextSibling);
+  return this;
+};
