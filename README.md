@@ -4,7 +4,7 @@ Element component
 
 ## Installation
 
-    $ component install onirame/element
+    $ component install enricomarino/element
 
 ## License
 
