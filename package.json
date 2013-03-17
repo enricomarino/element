@@ -1,0 +1,26 @@
+{
+  "name": "element",
+  "author": {
+    "name": "Enrico Marino",
+    "url": "http://onirame.com"
+  },
+  "description": "Element component",
+  "homepage": "https://github.com/enricomarino/element",
+  "keywords": [
+    "util",
+    "type",
+    "test"
+  ],
+  "contributors": [],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/enricomarino/element.git"
+  },
+  "main": "index.js",
+  "version": "0.0.1",
+  "devDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
