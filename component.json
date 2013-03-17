@@ -1,0 +1,8 @@
+{
+  "name": "element",
+  "repo": "enricomarino/element",
+  "description": "Element component",
+  "version": "0.0.1",
+  "dependencies": {},
+  "scripts": ["index.js"]
+}
