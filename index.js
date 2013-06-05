@@ -26,7 +26,8 @@ function create_element () {
     if (!(this instanceof element)) {
       return new element(el);
     }
-    this.el = el;
+    this.el = 
+    this.element = el;
   }
 
   /**
@@ -37,11 +38,8 @@ function create_element () {
    * @api public
    */
 
-  element.use = function (proto) {
-    var key;
-    for (key in proto) { 
-      element.prototype[key] = proto[key];
-    }    
+  element.use = function (fn) {
+    fn(this);
     return this;
   };
 
