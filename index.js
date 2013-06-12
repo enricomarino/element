@@ -10,7 +10,7 @@
  * Expose component
  */
 
-module.expose = function () {
+module.exports = function () {
 
   /*
    * element
