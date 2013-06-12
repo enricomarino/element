@@ -7,16 +7,10 @@
  */
 
 /*
- * Expose `create_element`
+ * Expose component
  */
 
-module.expose = create_element;
-
-/*
- * create_element
- */
-
-function create_element () {
+module.expose = function () {
 
   /*
    * element
