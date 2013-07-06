@@ -1,5 +1,5 @@
 /**
- * element
+ * Element
  * Element component
  * 
  * @author Enrico Marino
@@ -7,48 +7,45 @@
  */
 
 /**
- * Expose element
+ * Expose Element
  */
 
-module.exports = element;
+module.exports = Element;
 
 /**
- * element
+ * Element
  */
 
-function element (el) {
-  if (!(this instanceof element)) {
-    return new element(el);
-  }
-  if (el instanceof element) {
+function Element (el) {
+  if (el instanceof Element) {
     return el;
   }
   this.el = el;
 }
 
 /**
- * element.create
+ * Element.create
  * Create an element.
  * 
  * @param {Element} el element
- * @return {element} element instance
+ * @return {Element} element instance
  * @api public
  */
 
-element.create = function (el) {
+Element.create = function (el) {
   return new element(el);
 };
 
 /**
- * element.use
+ * Element.use
  * Use a plugin.
  * 
  * @param {Function} fn plugin
- * @return {element} element constructor for chaining
+ * @return {Element} Element constructor for chaining
  * @api public
  */
 
-element.use = function (fn) {
+Element.use = function (fn) {
   fn(this);
   return this;
 };
